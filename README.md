@@ -1,4 +1,4 @@
-## jest학습
+## Jest Basic
 
 <hr/>
 
@@ -19,8 +19,6 @@
 2. afterEach() : 각 테스트(test()) 실행 이후 실행
 3. beforeAll() : 테스트 파일 혹은 describe 실행 이전 실행
 4. afterAll() : 테스트 파일 혹은 describe 실행 이후 실행
-
-<hr/>
 
 ### Matchers
 
@@ -50,5 +48,14 @@ jest에서는 비동기를 사용하고 싶다면, done을 통해 작성하거�
 > Asynchronous.test.js파일 참고
 
 ### Mock Function
+
+가짜 함수를 간단하게 만들 수 있다.
+
+1. mockFn을 그냥 실행시키면 호출외 된다. 호출값은 mockFn.mock.call에 들어간다.
+2. mock.call 에는 mockFn의 인자가 들어간다.
+3. mockReturnValue() 는 리턴값을 설정할 수 있다.
+4. 값은 mockFn.mock.result에 들어간다.
+5. mockResolvedValue() 메서드는 비동기 함수를 흉내낼 수 있다.
+6. jest.mock("<경로>") 를 사용하여 실제 데이터를 가져와서 가짜 데이터로 만들 수 있음.
 
 > Mock.test.js 파일 참고
